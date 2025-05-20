@@ -86,7 +86,3 @@ Ce projet a été réalisé dans le cadre d'un cours pour apprendre à développ
 ## 📄 Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
-
----
-
-N'hésite pas à personnaliser ce `README.md` en fonction des spécificités de ton projet et des informations que tu souhaites mettre en avant.
