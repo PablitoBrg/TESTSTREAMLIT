@@ -20,9 +20,6 @@ st.set_page_config(
 # Afficher les informations sur l'application
 st.sidebar.image("https://mycowork.fr/wp-content/uploads/2018/03/Logo-commun-horizontal-1200-600.png")
 
-
-
-
 st.markdown("""
         <style>
             [data-testid="stSidebar"] {
@@ -183,16 +180,8 @@ def main():
 
         # Supprimer les lignes sans coordonnées valides
         df_idf = df_idf.dropna(subset=['latitude', 'longitude'])
-        # Champ texte
-        search_term = st.sidebar.text_input("Recherche")
 
-        # Bouton
-        if st.sidebar.button("Lancer la recherche"):
-            filtered_df = df_idf[df_idf.apply(lambda row: search_term.lower() in str(row['nom']).lower()
-                                                  or search_term.lower() in str(row['code_postal']).lower()
-                                                  or search_term.lower() in str(row['ville']).lower(), axis=1)]
-        else:
-            filtered_df = df_idf
+
         # Afficher les données
         st.subheader("Liste des espaces de coworking")
         st.dataframe(df_idf[['nom', 'adresse', 'téléphone', 'site', 'code_postal']])
